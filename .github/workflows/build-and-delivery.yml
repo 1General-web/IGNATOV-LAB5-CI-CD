@@ -7,6 +7,10 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   cd:
     runs-on: ubuntu-latest
@@ -26,4 +30,5 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ghcr.io/${{ github.repository }}/my-app:latest
+          # Имя приведено к нижнему регистру, так как Docker этого требует!
+          tags: ghcr.io/1general-web/ignatov-lab5-ci-cd/my-app:latest
