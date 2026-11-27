@@ -4,3 +4,4 @@ pytest
 httpx
 sqlalchemy
 pydantic
+pydantic-settings
